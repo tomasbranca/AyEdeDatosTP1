@@ -4,7 +4,7 @@
 
 Se requiere de un proceso que realice los pedidos de compra de artículos de los clientes. Para ello, se cuenta con los siguientes archivos de datos:
 
-##### Clientes.txt
+#### Clientes.txt
 Desordenado, máx. 100 clientes, conteniendo los siguientes datos:
 * Id.Cliente (máx. 8 díg.)
 * Raz.Soc. (str20)
@@ -16,14 +16,14 @@ Desordenado, máx. 100 clientes, conteniendo los siguientes datos:
 
 >El tipo sFec es un registro con 3 campos c/u. de tipo short dia, mes, agno, en ese orden.
 
-##### Articulos.txt
+#### Articulos.txt
 Sin orden, máx. 100 articulos, cada linea representa un articulo:
 * Cód.Artículo (1:100)
 * Descripción (str20)
 * Stock Actual (máx. 4 díg.)
 * Pre.Uni (máx. 9(7).99)
 
-##### Articulos.txt
+#### Articulos.txt
 Ordenado por **Id.Cliente** + **Cód.Artículo**, cada una de las líneas contiene los siguientes datos:
 * Id.Cliente
 * Cód.Artículo
@@ -66,7 +66,7 @@ main()   {
 Utilizar las siguientes funciones, invocando en donde sea necesario:
 * *bool* **LeerSuf** (*ifstream* &id, sid &id), el cual **lee una componente de datos** del archivo y los almacena en una estructura interna. La función retorna un boolean, verdadero, si la lectura fue exitosa, caso contrario, falso; *sid* indica un tipo de estructura de datos. Crear una función de lectura para cada archivo que se lee. Suf luego de Leer en el nombre de la función es un sufijo para el archivo que se lee, el cual debe ser reemplazado Suf por el nombre apropiado, p.e. *LeerCli, LeerArt…*
 * *void* **InsertarEnOrden** (*tid1* tbl, *tid2* id, *tid3* card), ordena tbl *Clientes* por *id.Cli.*
-* *void* **OrdxBur** (*tid *tbl, *tid* card), ordena tbl *Clientes* por *id.Cli.*
+* *void* **OrdxBur** (*tid* *tbl, *tid* card), ordena tbl *Clientes* por *id.Cli.*
 * *void* **IntCmb** (*id* &elem1,*id* &elem2), intercambia ambos elementos. 
 * *char* ***Space**(*short* n), retorna una cadena con n espacios.
 * *string* **Replicate**(*char* car, *unsigned* n), retorna una cadena con n veces car.
