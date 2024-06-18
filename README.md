@@ -4,7 +4,7 @@
 
 Se requiere de un proceso que realice los pedidos de compra de artículos de los clientes. Para ello, se cuenta con los siguientes archivos de datos:
 
-#####Clientes.txt
+##### Clientes.txt
 Desordenado, máx. 100 clientes, conteniendo los siguientes datos:
 * Id.Cliente (máx. 8 díg.)
 * Raz.Soc. (str20)
@@ -16,20 +16,20 @@ Desordenado, máx. 100 clientes, conteniendo los siguientes datos:
 
 >El tipo sFec es un registro con 3 campos c/u. de tipo short dia, mes, agno, en ese orden.
 
-#####Articulos.txt
+##### Articulos.txt
 Sin orden, máx. 100 articulos, cada linea representa un articulo:
 * Cód.Artículo (1:100)
 * Descripción (str20)
 * Stock Actual (máx. 4 díg.)
 * Pre.Uni (máx. 9(7).99)
 
-#####Articulos.txt
+##### Articulos.txt
 Ordenado por **Id.Cliente** + **Cód.Artículo**, cada una de las líneas contiene los siguientes datos:
 * Id.Cliente
 * Cód.Artículo
 * Cant.Pedida (máx. 4 díg.)
 
-###Consigna
+### Consigna
 1. Volcar a la memoria **RAM** en estructuras estáticas:
 	1a. _Clientes.Txt_: la clave y su posición ordenado por la **clave del cliente.**
 	1b. _Articulos.Txt_: todos los datos, existe una relación 1 a 1, es decir, **clave = posición.** 
@@ -61,7 +61,7 @@ main()   {
 }
 ``` 
 
-###Observaciones, restricciones y recursos disponibles
+### Observaciones, restricciones y recursos disponibles
 
 Utilizar las siguientes funciones, invocando en donde sea necesario:
 * *bool* **LeerSuf** (*ifstream* &id, sid &id), el cual **lee una componente de datos** del archivo y los almacena en una estructura interna. La función retorna un boolean, verdadero, si la lectura fue exitosa, caso contrario, falso; *sid* indica un tipo de estructura de datos. Crear una función de lectura para cada archivo que se lee. Suf luego de Leer en el nombre de la función es un sufijo para el archivo que se lee, el cual debe ser reemplazado Suf por el nombre apropiado, p.e. *LeerCli, LeerArt…*
@@ -104,7 +104,7 @@ El Trabajo Práctico deberá ser entregado de acuerdo a las pautas indicadas má
 
 9. Codificación del Algoritmo completo en el Lenguaje C++, emitiendo números de líneas. Usar Code-Blocks. Las primeras líneas serán de comentario indicando: Nombre del programa, fecha entrega, Nro. versión, breve comentario del objetivo del programa, datos del curso, nombre del día, turno, nro. del grupo e integrantes (Apellido, Nombre). Nombre del compilador: Borland C++ V.5.5
 
-###Formato del archivo de datos Clientes.Txt
+### Formato del archivo de datos Clientes.Txt
 
 Se deberá ajustar la escritura de los datos respetando a raja tabla este formato en donde cada columna representa un dato y su tipo de dato y ancho:
 
