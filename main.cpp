@@ -38,7 +38,7 @@ int importarClientes(){
     string linea;
 
     if (clientestexto.is_open()) {
-        int line_number=0;
+        short line_number=0;
         while (getline(clientestexto, linea)) {
             line_number++;
             clientes.idCliente[line_number]    = stoi(linea.substr(1-1,8));
@@ -46,7 +46,7 @@ int importarClientes(){
             clientes.domicilio[line_number]    = linea.substr(34-1,20);
             clientes.localidad[line_number]    = linea.substr(54-1,20);
             clientes.codigoPostal[line_number] = stoi(linea.substr(70-1,20));
-            clientes.fecha.agno[line_number]    = stoi(linea.substr(94-1,4));
+            clientes.fecha.agno[line_number]   = stoi(linea.substr(94-1,4));
             clientes.fecha.mes[line_number]    = stoi(linea.substr(99-1,2));
             clientes.fecha.dia[line_number]    = stoi(linea.substr(102-1,2));   
             clientes.saldo[line_number]        = stof(linea.substr(106-1,20));
@@ -69,9 +69,9 @@ int importarArticulos(){
         while (getline(articulostexto, linea)) {
             line_number++;
             articulos.idArticulo[line_number]        = stoi(linea.substr(1-1,3));
-            //articulos.descripcion[line_number]       = linea.substr(6-1,20);
-            //articulos.stockActual[line_number]       = stoi(linea.substr(28-1,3));
-            //articulos.precioUnitario[line_number]    = stof(linea.substr(33-1,10));  
+            articulos.descripcion[line_number]       = linea.substr(6-1,20);
+            articulos.stockActual[line_number]       = stoi(linea.substr(28-1,3));
+            articulos.precioUnitario[line_number]    = stof(linea.substr(33-1,10));  
         }
         articulostexto.close();
     } else {
@@ -83,10 +83,11 @@ int importarArticulos(){
 
 int main() {
     importarClientes();
+    importarArticulos();
     short clienteseleccionado;
     cout << "Seleccione un Cliente:";
     cin  >> clienteseleccionado;
-    /*
+    
     cout << clientes.idCliente[clienteseleccionado] << endl;
     cout << clientes.razonSocial[clienteseleccionado] << endl;
     cout << clientes.domicilio[clienteseleccionado] << endl;
@@ -96,7 +97,7 @@ int main() {
     cout << clientes.fecha.mes[clienteseleccionado] << endl;
     cout << clientes.fecha.dia[clienteseleccionado] << endl;
     cout << clientes.saldo[clienteseleccionado] << endl;
-    *//*
+    /*
     cout << articulos.idArticulo[clienteseleccionado] << endl;
     cout << articulos.descripcion[clienteseleccionado] << endl;
     cout << articulos.stockActual[clienteseleccionado] << endl;
